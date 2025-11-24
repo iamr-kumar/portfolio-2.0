@@ -45,6 +45,12 @@ export function Testimonials() {
     setCurrentIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
   };
 
+  const getFontSize = (text: string) => {
+    if (text.length < 150) return 'text-2xl sm:text-3xl';
+    if (text.length < 250) return 'text-xl sm:text-2xl';
+    return 'text-lg sm:text-xl';
+  };
+
   return (
     <section
       id="testimonials"
@@ -84,7 +90,7 @@ export function Testimonials() {
                 <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 sm:p-12 backdrop-blur-sm h-full flex flex-col justify-center">
                   <Quote className="w-12 h-12 text-cyan-400/30 mb-6" />
 
-                  <p className="text-xl sm:text-2xl text-gray-300 leading-relaxed mb-8">
+                  <p className={`${getFontSize(testimonials[currentIndex].quote)} text-gray-300 leading-relaxed mb-8 transition-all duration-300`}>
                     "{testimonials[currentIndex].quote}"
                   </p>
 

@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 };
 
 import { Background } from '@/components/ui/background';
+import { Toaster } from 'sonner';
 
 export default function RootLayout({
   children,
@@ -18,10 +19,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en">
       <body className={`${inter.variable} ${spaceGrotesk.variable} antialiased`}>
         <Background />
         {children}
+        <Toaster theme="dark" position="bottom-right" />
       </body>
     </html>
   );
