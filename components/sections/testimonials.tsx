@@ -46,8 +46,8 @@ export function Testimonials() {
   };
 
   const getFontSize = (text: string) => {
-    if (text.length < 150) return 'text-2xl sm:text-3xl';
-    if (text.length < 250) return 'text-xl sm:text-2xl';
+    if (text.length < 200) return 'text-2xl sm:text-3xl';
+    if (text.length < 300) return 'text-xl sm:text-2xl';
     return 'text-lg sm:text-xl';
   };
 

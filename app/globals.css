@@ -24,7 +24,7 @@ html {
   background-color: #0B1120;
 }
 
-section {
+/* section {
   scroll-snap-align: start;
   scroll-snap-stop: always;
-}
+} */
