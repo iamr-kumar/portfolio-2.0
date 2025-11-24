@@ -70,6 +70,8 @@ export function FloatingNavbar() {
         animate={{
           width: isExpanded ? 'auto' : '48px',
           height: isExpanded ? 'auto' : '48px',
+          minHeight: '48px',
+          minWidth: '48px',
           padding: isExpanded ? '12px 24px' : '12px',
         }}
         transition={{
@@ -78,7 +80,7 @@ export function FloatingNavbar() {
           damping: 30,
         }}
       >
-        <AnimatePresence mode="popLayout">
+        <AnimatePresence mode="wait">
           {isExpanded ? (
             <motion.div
               key="expanded"
@@ -117,10 +119,10 @@ export function FloatingNavbar() {
           ) : (
             <motion.div
               key="collapsed"
-              initial={{ opacity: 0, scale: 0.5, rotate: -90 }}
-              animate={{ opacity: 1, scale: 1, rotate: 0 }}
-              exit={{ opacity: 0, scale: 0.5, rotate: 90 }}
-              transition={{ duration: 0.3, ease: 'easeOut' }}
+              initial={{ opacity: 0, scale: 0.5 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.5 }}
+              transition={{ duration: 0.1 }}
               className="flex items-center justify-center w-full h-full absolute inset-0"
             >
               <Menu className="w-5 h-5 text-cyan-400" />
