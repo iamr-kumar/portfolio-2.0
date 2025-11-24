@@ -83,7 +83,7 @@ export function Projects() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center lg:text-left"
+          className="text-center lg:text-left mb-16 md:mb-24 lg:mb-0"
         >
           <h2 className="text-5xl lg:text-6xl font-bold text-gray-200 mb-6">
             Projects
@@ -102,7 +102,7 @@ export function Projects() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative h-[600px] flex items-center justify-center">
+          <div className="relative h-[500px] md:h-[600px] lg:h-[600px] flex items-center justify-center">
             <AnimatePresence mode="popLayout" initial={false} custom={direction}>
               {projects.map((project, index) => {
                 const position = getCardIndex(index);

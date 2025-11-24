@@ -50,7 +50,7 @@ export function Testimonials() {
       id="testimonials"
       className="relative min-h-screen flex flex-row-reverse items-center px-6 py-20"
     >
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_2px_30%] gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full flex flex-col-reverse lg:grid lg:grid-cols-[1fr_2px_30%] gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -58,7 +58,7 @@ export function Testimonials() {
           viewport={{ once: true }}
           className="relative"
         >
-          <div className="relative h-[400px] flex items-center">
+          <div className="relative min-h-[400px] flex items-center">
             <AnimatePresence mode="wait" custom={direction}>
               <motion.div
                 key={currentIndex}
@@ -79,7 +79,7 @@ export function Testimonials() {
                   duration: 0.5,
                   ease: [0.32, 0.72, 0, 1],
                 }}
-                className="absolute inset-0"
+                className="w-full"
               >
                 <div className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 sm:p-12 backdrop-blur-sm h-full flex flex-col justify-center">
                   <Quote className="w-12 h-12 text-cyan-400/30 mb-6" />

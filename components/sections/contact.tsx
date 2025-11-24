@@ -28,13 +28,13 @@ export function Contact() {
       id="contact"
       className="relative min-h-screen flex items-center px-6 py-20 pb-32"
     >
-      <div className="max-w-7xl mx-auto w-full grid lg:grid-cols-[1fr_2px_30%] gap-12 items-center">
+      <div className="max-w-7xl mx-auto w-full flex flex-col-reverse lg:grid lg:grid-cols-[1fr_2px_30%] gap-12 items-center">
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm"
+          className="w-full bg-slate-800/30 border border-slate-700/50 rounded-2xl p-8 backdrop-blur-sm"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
